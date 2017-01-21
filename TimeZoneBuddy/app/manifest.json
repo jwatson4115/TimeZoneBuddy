@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "One-click Kittens",
-  "description": "This extension demonstrates a browser action with kittens.",
+  "name": "TimeZoneBuddy",
+  "description": "A simple extension that changes all time zones on a page to your local time.",
   "version": "1.0",
 
   "permissions": [
