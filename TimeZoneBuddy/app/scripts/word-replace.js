@@ -1,8 +1,13 @@
-﻿replaceTextInHtml(getTimeZoneRegex(), 'found');
+﻿replaceTextInHtml(getTimeZoneRegex(), "found");
 
-/* Replaces all occurences of a piece of text in an html with another */
+var time = "2pm";
+var utcTime = getUTCDate(time, -5);
+
+console.log(utcTime);
+
+/* Replaces all occurences of a piece of text in an html DOM with another */
 function replaceTextInHtml(oldText, newText) {
-    var elements = document.getElementsByTagName('*');
+    var elements = document.getElementsByTagName("*");
 
     for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
@@ -23,6 +28,8 @@ function replaceTextInHtml(oldText, newText) {
         }
     }
 }
+
+
 
 /* Returns a regex that matches many common time zone formats
  * Examples: "4pm EDT", "12am GMT", "12pm GMT + 1" */ 

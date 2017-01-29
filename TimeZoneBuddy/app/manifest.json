@@ -6,13 +6,23 @@
   "version": "0.1",
 
   "background": {
-    "scripts": [ "scripts/jquery-3.1.1.min.js" ]
+    "scripts": [
+      "scripts/jquery-3.1.1.min.js",
+      "scripts/moment-js/moment.min.js",
+      "scripts/moment-js/moment-timezone-with-data.min.js"
+    ]
   },
 
   "content_scripts": [
     {
       "matches": [ "*://*/*" ],
-      "js": [ "scripts/jquery-3.1.1.min.js", "scripts/word-replace.js" ],
+      "js": [
+        "scripts/jquery-3.1.1.min.js",
+        "scripts/moment-js/moment.min.js",
+        "scripts/moment-js/moment-timezone-with-data.min.js",
+        "scripts/utc-format.js",
+        "scripts/word-replace.js"
+      ],
       "run_at": "document_end"
     }
   ],
