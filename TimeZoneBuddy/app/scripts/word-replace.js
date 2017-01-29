@@ -29,3 +29,5 @@ function replaceTextInHtml(oldText, newText) {
 function getTimeZoneRegex() {
     return /((2[0-4])|(1[0-9])|[1-9])(:([1-6][0-9]|[0][0-9]))?\s*(pm|am)?\s(edt|gmt|utc|est|cest|pst|ist|cst|mst|bst)\s?((\+|\-)\s?((2[0-4])|(1[0-9])|[1-9])?(:([1-6][0-9]|[0][0-9]))?)?/ig;
 }
+
+
