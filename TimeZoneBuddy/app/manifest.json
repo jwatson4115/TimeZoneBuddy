@@ -21,6 +21,7 @@
         "scripts/moment-js/moment.min.js",
         "scripts/moment-js/moment-timezone-with-data.min.js",
         "scripts/utc-format.js",
+        "scripts/offset-list.js",
         "scripts/word-replace.js"
       ],
       "run_at": "document_end"

@@ -42,10 +42,6 @@
     <Content Include="app\img\icon.png" />
     <Content Include="app\popup.html" />
     <Content Include="app\scripts\jquery-3.1.1.min.js" />
-    <Content Include="app\scripts\jquery-localtime\jquery.localtime-0.9.1.min.js" />
-    <Content Include="app\scripts\moment-js\moment-timezone-with-data.min.js" />
-    <Content Include="app\scripts\moment-js\moment.min.js" />
-    <Content Include="app\scripts\utc-format.js" />
     <Content Include="app\scripts\word-replace.js" />
     <Content Include="Properties\build\lib\Ionic.Zip.DLL" />
     <Content Include="Properties\build\lib\MSBuild.ExtensionPack.dll" />

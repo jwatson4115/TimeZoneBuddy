@@ -1,7 +1,7 @@
 ﻿replaceTextInHtml(getTimeZoneRegex(), "found");
 
-var time = "2pm";
-var utcTime = getUTCDate(time, -5);
+var time = "2pm edt";
+var utcTime = getUTCDate(time, getOffset(time));
 
 console.log(utcTime);
 
@@ -36,3 +36,5 @@ function replaceTextInHtml(oldText, newText) {
 function getTimeZoneRegex() {
     return /((2[0-4])|(1[0-9])|[1-9])(:([1-6][0-9]|[0][0-9]))?\s*(pm|am)?\s(edt|gmt|utc|est|cest|pst|ist|cst|mst|bst)\s?((\+|\-)\s?((2[0-4])|(1[0-9])|[1-9])?(:([1-6][0-9]|[0][0-9]))?)?/ig;
 }
+
+
