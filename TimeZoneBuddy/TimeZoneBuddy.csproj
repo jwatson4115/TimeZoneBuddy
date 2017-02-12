@@ -42,7 +42,11 @@
     <Content Include="app\img\icon.png" />
     <Content Include="app\popup.html" />
     <Content Include="app\scripts\jquery-3.1.1.min.js" />
+    <Content Include="app\scripts\jquery-localtime\jquery.localtime-0.9.1.min.js" />
+    <Content Include="app\scripts\moment-js\moment-timezone-with-data.min.js" />
+    <Content Include="app\scripts\moment-js\moment.min.js" />
     <Content Include="app\scripts\offset-list.js" />
+    <Content Include="app\scripts\utc-format.js" />
     <Content Include="app\scripts\word-replace.js" />
     <Content Include="Properties\build\lib\Ionic.Zip.DLL" />
     <Content Include="Properties\build\lib\MSBuild.ExtensionPack.dll" />
@@ -50,13 +54,16 @@
     <Content Include="index.htm" />
     <Content Include="Properties\build\ligershark.chrome.targets" />
     <Content Include="screenshots\readme.txt" />
+    <Content Include="bin\TimeZoneBuddy.zip" />
     <None Include="scripts\_references.js" />
     <None Include="scripts\chrome-api-vsdoc.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\manifest.json" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -6,7 +6,19 @@ function getUTCDate(time, offset) {
 
     date.setTime(date.getTime() + offset * 60 * 60 * 1000);
 
-    return date;
+    //return date;
+
+    var hh = date.getHours();
+    var mm = date.getMinutes();
+
+    if (hh < 10) {
+        hh = "0" + hh;
+    }
+    if (mm < 10) {
+        mm = "0" + mm;
+    }
+
+    return hh + ":"+mm+" your time.";
 }
 
 /* Get the current date of the users browser to format 
@@ -32,6 +44,7 @@ function getFormattedDate() {
  * A UTC format time string */
 function getFormattedTime(time) {
     var formattedTime;
+    time = time.toLowerCase();
 
     // check if 24 hour format or not
     if (time.indexOf("am") === -1 && time.indexOf("pm") === -1) {

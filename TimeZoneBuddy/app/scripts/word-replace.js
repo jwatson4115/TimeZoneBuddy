@@ -1,4 +1,5 @@
-﻿replaceTextInHtml(getTimeZoneRegex(), "found");
+﻿
+replaceTextInHtml(getTimeZoneRegex(), "found");
 
 var time = "2pm edt";
 var utcTime = getUTCDate(time, getOffset(time));
@@ -18,18 +19,34 @@ function replaceTextInHtml(oldText, newText) {
             if (node.nodeType === 3) {
                 var text = node.nodeValue;
 
-                var replacedText = text
-                    .replace(oldText, newText);
+                var oldTextArray = text.match(oldText);
 
-                if (replacedText !== text) {
-                    element.replaceChild(document.createTextNode(replacedText), node);
+                if (typeof oldTextArray !== "undefined" && oldTextArray !== null) {
+
+                    //debugger;
+                    //for (var i = 0; i < oldTextArray.length; i++) {
+                    //    console.log(oldTextArray[i]);
+                    //}
+
+                    var replacedText = text
+                        .replace(oldTextArray[0], getUTCDate(oldTextArray[0], getOffset(oldTextArray[0])));
+
+                    if (replacedText !== text) {
+                        element.replaceChild(document.createTextNode(replacedText), node);
+                    }
                 }
+
+
+                //var replacedText = text
+                //    .replace(oldText, getUTCDate(text, getOffset(text)));
+
+                //if (replacedText !== text) {
+                //    element.replaceChild(document.createTextNode(replacedText), node);
+                //}
             }
         }
     }
 }
-
-
 
 /* Returns a regex that matches many common time zone formats
  * Examples: "4pm EDT", "12am GMT", "12pm GMT + 1" */ 
